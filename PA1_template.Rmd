@@ -1,7 +1,13 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: html_document
 html_document:
+  keep_md: yes
+  number_sections: yes
+output: 
+  html_document: 
+    keep_md: yes
+    number_sections: yes
+    toc: yes
+title: "Reproducible Research: Peer Assessment 1"
 keep_md: true
 ---
 
@@ -28,7 +34,7 @@ steps_day <- activity %>% group_by(date) %>% summarise(steps = sum(steps, na.rm 
 ```
 
 * Creating a histogram to explore the data
-```{r echo=TRUE}
+```{r plot}
 p <- ggplot(steps_day, aes(steps))
 p + geom_histogram(fill = "red", bins = 30)
 ```
